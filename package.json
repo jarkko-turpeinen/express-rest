@@ -1,11 +1,13 @@
 {
   "name": "express-rest",
   "version": "1.0.0",
-  "description": "Express REST service for IoT devices",
+  "description": "Express REST service",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "image": "docker build -t gearloose/express-rest .",
+    "docker": "docker run -p 49160:8080 -d gearloose/express-rest"
   },
   "repository": {
     "type": "git",
@@ -13,8 +15,7 @@
   },
   "keywords": [
     "Express",
-    "REST",
-    "IoT"
+    "REST"
   ],
   "author": "Jarkko Turpeinen",
   "license": "MIT",
@@ -23,12 +24,7 @@
   },
   "homepage": "https://github.com/jarkko-turpeinen/express-rest#readme",
   "dependencies": {
-    "axios": "^0.18.0",
     "dotenv": "^6.0.0",
-    "expect": "^23.6.0",
-    "express": "^4.16.3",
-    "kafka-node": "^2.6.1",
-    "mocha": "^5.2.0",
-    "nano": "^6.4.4"
+    "express": "^4.16.3"
   }
 }
